@@ -1,0 +1,18 @@
+{
+  "sensores": [
+    {
+      "name": "Sensor Magnetometro HMC5983",
+      "specs": "http://localhost:8080/sensores/magnetometro",
+      "default_launch": "http://localhost:8080/sensores/magnetometro/launch",
+      "custom_launch" : "http://localhost:8080/sensores/magnetometro/launch?time=X&frec=Y",
+      "last_data" : "http://localhost:8080/sensores/magnetometro/data"
+    },
+    {
+      "name": "Sensor de Distancia HJC-SR04",
+      "specs": "http://localhost:8080/sensores/ultrasonido",
+      "default_launch": "http://localhost:8080/sensores/ultrasonido/launch",
+      "custom_launch" : "http://localhost:8080/sensores/ultrasonido/launch?time=X&frec=Y",
+      "last_data" : "http://localhost:8080/sensores/ultrasonido/data"
+    }
+  ]
+}

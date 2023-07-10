@@ -1,0 +1,8 @@
+{
+  "bienvenida": "Bienvenido al servidor Erlang",
+  "utilizacion": "Desde aquí podrás ver la descripción de los sensores y lanzarlos para obtener sus datos.",
+  "uso": {
+    "/sensores": "Muestra los sensores disponibles.",
+    "/archivos": "Muestra los archivos de datos disponibles."
+  }
+}

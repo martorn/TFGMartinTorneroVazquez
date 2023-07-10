@@ -1,0 +1,16 @@
+{
+  "sensor": "Sensor de ultrasonidos HC-SR04",
+  "descripcion": "Dispositivo utilizado para medir distancias mediante ultrasonidos.",
+  "funcionamiento": "Se basa en la emisión de pulsos de ultrasonido y la detección del eco de esos pulsos. El sensor emite un pulso ultrasónico y luego espera a recibir el eco del pulso que rebota en un objeto cercano. Midiendo el tiempo que tarda el pulso en viajar de ida y vuelta, el sensor puede determinar la distancia al objeto deseado.",
+  "componentes": "Consta de un transmisor ultrasónico y un receptor ultrasónico. El transmisor emite pulsos de ultrasonido y el receptor detecta los ecos de esos pulsos. La distancia se calcula midiendo el tiempo transcurrido entre la emisión y la recepción de los pulsos.",
+  "parametros_modificables": "El lanzamiento de la medición del sensor consta de dos parámetros; La frecuencia de las lecturas y el ratio de las mismas.",
+  "ejemplo_parametros": {
+    "time": "Tiempo en segundos que durará la medición del sensor. Ej: time=5 --> El sensor realizará una lectura de datos durante 5 segundos.",
+    "frec": "Frecuencia o ratio de las lecturas, es decir, el tiempo transcurrido entre lectura y lectura medido en segundos. Ej: 0.5 --> Se realizará una lectura cada medio segundo."
+  },
+  "archivo_resultante": "Se obtiene un archivo con los datos de distancia en centímetros obtenidos por el sensor a lo largo de la lectura.",
+  "uso": {
+    "lanzar_lectura": "http://localhost:8080/sensores/ultrasonido/launch?time=5&frec=0.5",
+    "lectura_datos": "http://localhost:8080/sensores/ultrasonido/data"
+  }
+}

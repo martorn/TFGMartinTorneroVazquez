@@ -1,0 +1,18 @@
+{
+  "sensor": "Sensor magnetómetro HMC5983",
+  "descripcion": "Dispositivo utilizado para medir el campo magnético.",
+  "funcionamiento": "Utiliza un conjunto de sensores de efecto Hall para detectar y medir la intensidad del campo magnético en tres ejes: X, Y y Z. Estos valores de campo magnético se utilizan para determinar la orientación y dirección del sensor en relación con el campo magnético terrestre o cualquier otro campo magnético cercano.",
+  "comunicacion": "La comunicación entre el sensor y el host puede realizarse utilizando dos tipos de protocolos; I2C (Inter-Integrated Circuit) y SPI (Serial Peripheral Interface), en este caso se utiliza únicamente I2C debido a su sencillez.",
+  "componentes": "Está compuesto por sensores Hall en cada uno de los ejes (X, Y, Z), circuitos de acondicionamiento de señales, convertidores analógico a digital (ADC) y una interfaz de comunicación. Estos componentes trabajan juntos para medir y proporcionar datos digitales sobre el campo magnético en las tres direcciones.",
+  "parametros_modificables": "El lanzamiento de la medición del sensor consta de dos parámetros; La frecuencia de las lecturas y el ratio de las mismas.",
+  "ejemplo_parametros": {
+    "time": "Tiempo en segundos que durará la medición del sensor. Ej: time=5 --> El sensor realizará una lectura de datos durante 5 segundos.",
+    "frec": "Frecuencia o ratio de las lecturas, es decir, el tiempo transcurrido entre lectura y lectura medido en segundos. Ej: 0.5 --> Se realizará una lectura cada medio segundo."
+  },
+  "cabeceo": "Nos referiremos a esta orientación como cabeceo. Se refiere a la medición de la inclinación o ángulo de inclinación del sensor con respecto al plano horizontal. En otras palabras, el cabeceo es el ángulo de rotación alrededor del eje X del sensor.",
+  "archivo_resultante": "Se obtiene un archivo con los datos del CABECEO en grados obtenidos por el sensor a lo largo de la lectura.",
+  "uso": {
+    "lanzar_lectura": "http://localhost:8080/sensores/magnetometro/launch?time=5&frec=0.5",
+    "lectura_archivo": "http://localhost:8080/sensores/magnetometro/data"
+  }
+}
