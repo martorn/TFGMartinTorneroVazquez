@@ -2,7 +2,7 @@
 En este repositorio se almacenan los archivos que componen el servidor y los programas de los sensores HMC5983 y HC-SR04 utilizados para la realización del Trabajo de Fin de Grado de Martín Tornero Vázquez.
 
 En las carpetas de los sensores encontramos dos archivos: Programa en C y programa en Python. El utilizado por el servidor es el programa en C.
-Para ejecturar los programas en C estos deben compilarse utilizando sus librerías.
+Para ejecutar los programas en C estos deben compilarse utilizando sus librerías.
 -En el caso del sensor de ultrasonido HC-SR04 debe compilarse la librería WiringPi.h de la siguiente manera:  gcc -o ultrasonido ultrasonido.c -lwiringPi
 -En el caso del sensor magnetómetro HMC5983 debe compilarse la librería pigpio.h de la siguiente manera: gcc -o cabeceoArchivo cabeceoArchivo.c -lpigpio -lm
 
