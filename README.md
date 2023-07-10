@@ -1,4 +1,4 @@
-# TFGMartinTorneroVazquez
+# Aplicación de Adquisición de Datos de Sensores Mediante Raspberry-Pi en Entorno Erlang OTP
 En este repositorio se almacenan los archivos que componen el servidor y los programas de los sensores HMC5983 y HC-SR04.
 
 En las carpetas de los sensores encontramos dos archivos: Programa en C y programa en Python. El utilizado por el servidor es el programa en C.
