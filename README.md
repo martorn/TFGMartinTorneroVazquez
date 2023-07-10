@@ -11,5 +11,5 @@ una vez completada la configuración inicial se pueden descargar los archivos de
 
 Por defecto el servidor es lanzado en localhost sobre el puerto 8080, en caso de querer modificar esto podemos hacerlo de manera sencilla en hello_erlang_app.erl en su sección correspondiente.
 
-Por otro lado, es posible que surjan errores a la hora de lanzar los códigos de los sensores, es imporante que se hayan compilado con anterioridad e indicar al servidor el lugar de almacenamiento del ejecutable del archivo
+Por otro lado, es posible que surjan errores a la hora de lanzar los códigos de los sensores, es importante que se hayan compilado con anterioridad e indicar al servidor el lugar de almacenamiento del ejecutable del archivo
 y la localización de los archivos creados que almacenan los datos de los sensores. Estas modificaciones deben realizarse sobre el archivo launch_handler.erl en sus funciones correspondientes.
