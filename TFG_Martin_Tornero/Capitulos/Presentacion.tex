@@ -1,0 +1,76 @@
+
+\chapter{Presentación}\label{cap.introduccion}
+
+\section{Objetivo}%
+\label{sec:Objetivo}
+
+El objetivo de este proyecto es construir y documentar una plataforma funcional que permita la recogida de datos de sensores mediante una interfaz web sobre Hardware Raspberry-Pi mediante el lenguaje Erlang OTP, en lo sucesivo abreviaremos por <<Erlang>> (como la función de distribución de probabilidad).
+
+El objetivo principal es obtener un prototipo final funcional que permita recoger los datos y analizarlos, sin embargo, el objetivo global del trabajo será analizar la diferencia entre los distintos sensores, protocolos y lenguajes a utilizar, ver su viabilidad, la complejidad que conlleva y obtener conclusiones razonadas sobre la utilización de Erlang para este uso.
+
+
+\section{Motivación}
+
+La domotización de los hogares y las empresas está cada vez mas en auge y por tanto mas solicitada a los técnicos informáticos.
+
+El uso de sensores ofrece una amplia gama de beneficios para las empresas en la actualidad. Su implementación estratégica puede impulsar el crecimiento, mejorar la eficiencia operativa y brindar una ventaja competitiva significativa. Entre algunos de los beneficios que aporta el uso de este tipo de herramientas encontramos: La optimización de procesos, el mantenimiento predictivo, la posible mejora de la seguridad y la toma de decisiones basada en datos precisos.
+
+A pesar de la existencia de proyectos similares utilizando otras tecnologías, este trabajo trata de analizar el uso del lenguaje Erlang para crear servidores que permitan leer y analizar los datos obtenidos de los sensores dispuestos en un marco empresarial o doméstico y si se trata de una elección sólida para el desarrollo de este tipo de servidores. Sobre el papel, las características únicas de Erlang lo convierten en un lenguaje altamente eficiente y confiable para este tipo de aplicaciones ya que entre otras, una de las fortalezas clave de este lenguaje es su capacidad para manejar la concurrencia y la escalabilidad. Un servidor Erlang puede gestionar de manera eficiente múltiples solicitudes simultáneas provenientes de diferentes sensores distribuidos en una red.
+
+El modelo de concurrencia de Erlang, basado en actores y en el intercambio de mensajes ligero, permite un manejo eficiente de la concurrencia sin preocuparse por los problemas habituales como las condiciones de carrera o los bloqueos. A mayores, Erlang es ampliamente conocido por su sistema de tolerancia a fallos integrado, sobretodo en servidores, lo que es fundamental cuando se trata de aplicaciones críticas como el monitoreo de sensores en un entorno empresarial.
+
+\section{Propósito general}
+
+El propósito global es conseguir un servidor Erlang operativo que permita conocer la información de los sensores conectados a la placa R-Pi, a través del cual se puedan lanzar la lectura de los mismos y obtener los datos obtenidos para su análisis. Para ello se implementará:
+
+\begin{itemize}
+
+    \item Una placa Raspberry-Pi3 con sistema operativo Raspbian que dispondrá de los sensores conectados a sus pines GPIO.
+    
+    \item Los programas C que ejecuten los sensores y almacenen sus datos en archivos de texto.
+    
+    \item Un servidor creado mediante Erlang con una sencilla interfaz web usando HTML y JSON.
+    
+    \item Diseño de un API REST HTTP robusta que permita el empleo de los sensores desde un terminal usando el mínimo de recursos.
+\end{itemize}
+
+En cómputo, se implementará una aplicación Erlang OTP que modele la lógica del servidor, esta aplicación hará uso de un servidor Web Cowboy y los códigos C que permitan la ejecución y lectura de datos de los sensores.
+
+\section{Entorno tecnológico}
+
+En el proyecto se utilizan distintas tecnologías hardware y software que tienen que ver con tres áreas de desarrollo distintas, como son la del desarrollo del servidor asociado a los sensores, la tecnología de desarrollo del cliente y finalmente aquellas propias del hardware de Rasoberry-Pi. A continuación se desglosa por cada una de las cuales son los elementos tecnológicos más relevantes:
+
+\begin{itemize}
+ \item Tecnologías de Servidor:
+ \begin{itemize}
+     \item Aplicación Erlang OTP: Responsable del correcto funcionamiento del servidor; inicialización, finalización y conexiones.
+     \item Servidor Web Cowboy: Responsable de la trasmisión de información entre el servidor y la placa R-Pi, así como la visualización web.
+ \end{itemize}
+ 
+\item \textbf{Cliente:}
+\begin{itemize}
+    \item JSON: Responsable de almacenar todas las descripciones de los usuarios y el manual de uso
+\end{itemize}
+
+\item \textbf{Raspberry-Pi:}
+\begin{itemize}
+    \item Códigos C: Programación de los diferentes sensores para obtener datos y almacenarlos en un archivo, serán invocados por el servidor.
+\end{itemize}
+\end{itemize}
+
+
+\section{Organización de la memoria}
+
+La documentación ha sido estructurada de la siguiente forma:
+
+En primer lugar, se ha realizado una presentación de los conceptos básicos sobre el proyecto en la cual se enumeran y describen cada uno de los componentes hardware del mismo así como herramientas software utilizadas y lenguajes de programación usados.
+
+El proyecto se ha dividido en tres prototipos:
+\begin{itemize}
+    \item Prototipo de Exploración: Se describe el desarrollo inicial del sistema, la configuración de la Rasperry-Pi así como la conexión de los sensores y su implementación.
+    \item Prototipo Incremental: Se describe como puede utilizarse Erlang sobre Raspberry-Pi 3 así como diferentes métodos de instalación de este lenguaje sobre esta.
+    \item Prototipo funcional: Se explica como se ha creado el servidor y cada una de sus partes y se describen las pruebas realizadas sobre el mismo.
+\end{itemize}
+
+Por último, encontramos las conclusiones obtenidas del proyecto y las posibilidades de ampliación del mismo.
+
